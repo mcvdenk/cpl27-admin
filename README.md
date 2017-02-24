@@ -1,6 +1,6 @@
 # TODO
 
-=== Kooksysteem ===
+### Kooksysteem ###
 
   * Punten
     * Per keer berekenen
@@ -9,7 +9,7 @@
     * Gaan naar afrekening
   * Automatisch inschrijven
 
-=== Afrekening ===
+### Afrekening ###
 
   * Declaraties
     * Afloop
@@ -23,7 +23,7 @@
     * Genereren overzicht betalingen
     * Handmatige controle met rekening
 
-=== Corvees ===
+### Corvees ###
 
   * Controleren
     * Checklists
@@ -37,7 +37,7 @@
   * Alt 2:
     * Puntensysteem
 
-=== Persoonsbeheer ===
+### Persoonsbeheer ###
 
   * Toevoegen
     * email
