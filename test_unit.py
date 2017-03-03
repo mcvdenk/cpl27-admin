@@ -2,12 +2,13 @@ from sqlalchemy import *
 from datetime import datetime
 from cooking_points import *
 
-engine = create_engine('sqlite:///:memory:', echo=True)
+engine = create_engine('sqlite:///:memory:', echo=False)
 meta = MetaData()
 conn = engine.connect()
 persons = Table('Person', meta,
         Column('id', Integer, primary_key=True),
         Column('name', String),
+        Column('cooking_points', Integer, default=0),
         )
 cooking_roles = Table('CookingRole', meta,
         Column('name', String, primary_key=True),
@@ -17,7 +18,7 @@ cookings = Table('Cooking', meta,
         Column('id', Integer, primary_key=True),
         Column('date', DateTime, default=datetime.now()),
         )
-cooking_entries = Table('cooking_entry', meta,
+cooking_entries = Table('CookingEntry', meta,
         Column('id', Integer, primary_key=True),
         Column('person', None, ForeignKey('Person.id')),
         Column('role', None, ForeignKey('CookingRole.name')),
@@ -49,4 +50,4 @@ print('Cooking points:')
 result = conn.execute(select([persons.c.name, persons.c.id]))
 for row in result:
     print(str(row[persons.c.id])+'|'+row[persons.c.name]+': '
-            +str(calculate_cooking_points(row[persons.c.id])))
+            +str(calculate_cooking_points(row[persons.c.id], conn)))
