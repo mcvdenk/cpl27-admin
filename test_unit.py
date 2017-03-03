@@ -1,6 +1,6 @@
 from sqlalchemy import *
 from datetime import datetime
-from cooking_points import *
+from cpl27.cooking_points import *
 
 engine = create_engine('sqlite:///:memory:', echo=False)
 meta = MetaData()
