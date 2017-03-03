@@ -1,0 +1,7 @@
+<form method="POST" action="{{ url_for('declarations') }}">
+    {{ form.csrf_token }}
+    {{ form.person.label }} {{ form.person }}
+    {{ form.cost.label }} {{ form.cost }}
+    {{ form.note.label }} {{ form.note }}
+    <input type="submit" value="Add">
+</form>

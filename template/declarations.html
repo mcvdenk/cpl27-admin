@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block body %}
+{# with some query #}
+<table class="table">
+    <thead>
+        <tr>
+            {# for all column names #}
+                <th>{# print column name #}</th>
+            {# endfor #}
+        </tr>
+    </thead>
+    <tbody>
+        {# for all rows #}
+            <tr>
+                {# for all fields #}
+                    <td>{# value #}</td>
+                {# endfor #}
+            </tr>
+        {# endfor #}
+    </tbody>
+{# endwith #}
+</table>
+
+
+{% include "declareForm.html" %}
+
+{% endblock %}

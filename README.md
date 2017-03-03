@@ -1,51 +1,52 @@
 # TODO
+Planned features:
 
-### Kooksysteem ###
+### Cooking system ###
 
-  * Punten
-    * Per keer berekenen
-    * Overloop berekenen
-  * Kosten
-    * Gaan naar afrekening
-  * Automatisch inschrijven
+  * Points
+    * Calculate per week
+    * Readjust for leaving flat mates
+  * Costs
+    * to flat bill
+  * Automatic joining
 
-### Afrekening ###
+### Flat bill ###
 
-  * Declaraties
-    * Afloop
-  * Automatische rekening genereren
-    * Notificatie wanneer negatief
-  * Handmatig invoeren:
-    * Printen
-    * Koffie
-    * Drank
-  * Controle betalingen
-    * Genereren overzicht betalingen
-    * Handmatige controle met rekening
+  * Declarations
+    * with writeoff
+  * Automatic bill generation
+    * Notification for (significant) negative balance
+  * Manually enter
+    * prints
+    * coffee
+    * drinks
+  * Verification
+    * Generate declaration overviews
+    * Manual check with bank account
 
-### Corvees ###
+### Cleaning duties ###
 
-  * Controleren
+  * Checking
     * Checklists
-    * Doorgeven
-  * Notificaties
+    * Passing on duties
+  * Notifications
     * iCAL
     * email
   * Alt 1:
-    * Ruilen
+    * Swap duties
     * Queue
   * Alt 2:
-    * Puntensysteem
+    * Points system
 
-### Persoonsbeheer ###
+### Person management ###
 
-  * Toevoegen
+  * Adding
     * email
-    * bankrekening
-    * kamernummer
-    * Lopende transacties herberekenen
-  * Verwijderen
-    * Eerst naar reservelijst
-    * Als saldo nul, dan verwijderd
-    * Lopende transacties herberekenen
-  * Lijst genereren van actieve emails
+    * bank account number
+    * room number
+    * Re-evaluate active writeoffs
+  * Removing
+    * First to inactive list
+    * Remove when balance equals 0
+    * Re-evaluate active writeoffs
+  * Generate list of active email accounts
