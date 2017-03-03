@@ -2,6 +2,7 @@
 
 from sqlalchemy import Column, Integer, String, Date, ForeignKey, Float, Text
 from sqlalchemy.ext.declarative import declarative_base
+from datetime import datetime
 
 Base = declarative_base()
 
@@ -25,6 +26,7 @@ class CookingRole(Base):
 
 class DutyEntry(Base):
     __tablename__ = 'DutyEntry'
+    id     = Column(Integer, primary_key=True)
     person = Column(Integer, ForeignKey('Person.id'), nullable=False)
     type   = Column(Integer, ForeignKey('DutyType.id'), nullable=False)
     date   = Column(Date, nullable=False)
@@ -48,7 +50,7 @@ class Person(Base):
     name          = Column(String(50), nullable=False)
     email         = Column(String(100))
     bankAccount   = Column(String(50))
-    joinDate      = Column(Date, nullable=False)
+    joinDate      = Column(Date, default = datetime.utcnow, nullable=False)
     leaveDate     = Column(Date)
     room          = Column(Integer, ForeignKey('Room.number'))
     cookingPoints = Column(Float)
