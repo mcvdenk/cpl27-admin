@@ -1,0 +1,10 @@
+{
+    "version": "0.1.0",
+    "command": "flask",
+    "options": {
+        "env": { "FLASK_APP": "cpl27" }
+    },
+    "isShellCommand": true,
+    "args": ["run"],
+    "showOutput": "always"
+}

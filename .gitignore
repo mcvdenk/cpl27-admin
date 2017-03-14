@@ -1,2 +1,5 @@
 CPL27Admin.egg-info/
+__pycache__/
 cpl27/__pycache__/
+dist/
+build/
